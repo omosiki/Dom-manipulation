@@ -13,9 +13,35 @@
         <p>Javascript DOM</p>
         <p>Javascript DOM</p>
     </div>
+    <ul id="meun">
+        <li>Home</li>
+        <li>STORE</li>
+        <li>guhjf</li>
+        <li style="display: none;">bcndj</li>
+    </ul>
 <script>
     let second = document.querySelector(".title ")
     console.log(parent.ChildNodes)
+    // How to create html element
+    let div = document.createElement("div")
+    console.log(div)
+    div.innerHTML = "<p>Wellcome to stack </p>"
+    document.body.appendChild(div)
+    // let add id
+    // or class  name
+    div.id = "Abdul"
+    // appendChild metho
+
+    let meun = document.getElementById("meun")
+    let list = document.createElement("li")
+    list.innerHTML = "fihdkdkkd"
+    meun.appendChild(list);
+    // textcontent
+    console.log(meun.textContent)
+    console.log(meun.innerText)  //let do display none//
+    // meun.textContent = "Hello"
+    // inner html is used to add to the web page
+    meun.innerHTML = "<h2>btyrgn</h2>"
 </script>
 </body>
 </html>
