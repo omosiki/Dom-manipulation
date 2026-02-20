@@ -33,19 +33,29 @@
 			margin-bottom: 10px;
 			border-radius: 3px;
 			border: 2px solid transparent;
-			text-align: center;
+			/* text-align: center; */
 			width: 90%;
 			font-size: 16px;
 			transition: border .2s, background-color .2s;
+              outline: none;
+  /* padding: 0 15px; */
+  font-size: 17px;
+  font-weight: 400;
+  color: #333;
+  border: 1.5px solid #C7BEBE;
+  border-bottom-width: 2.5px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+
 		}
 		form .field{
 			background-color: #ECF0F1;
 		}
 		form .field:focus {
-			border: 2px solid #3498DB;
+			border: 2px solid  #4070f4;;
 		}
 		form .btn{
-			background-color: #3498DB;
+			/* background-color: #3498DB; */
              background: #4070f4;
 			color: #fff;
 			line-height: 25px;
@@ -56,7 +66,7 @@
 			/* background-color: #1F
             78B4; */
              background: #4070f4;
-			border: 2px solid #1F78B4;
+			border: 2px solid  #4070f4;;
 		}
 		.pass-link{
 			text-align: center;
