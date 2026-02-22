@@ -28,20 +28,28 @@ form.addEventListener("submit", async function(Event){
 
 
     if (password.value !== confirmPassword.value){
-        alert("password do not match!")
+        Swal.fire({
+  icon: "success",
+  title: "password do not match",
+  showConfirmButton: false,
+  timer: 2000
+});
     }
     if(!checkBox.checked){
-        alert("Please agree to the terms")
+        blurt("Please agree to the terms")
  
     }
     try{
         const userCredential = await createUserWithEmailAndPassword(auth,
              email.value,
-              password.value);
+              password.value,
+              confirmPassword.value
+            );
         alert("Account Created successfully!!")
         console.log(userCredential.user)
         form.reset()
         window.location.href = "logIn-form.html"
+        // alert("comgrat")
     }catch(error){
         alert(error.message)
     }
