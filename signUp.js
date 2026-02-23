@@ -29,26 +29,41 @@ form.addEventListener("submit", async function(Event){
 
     if (password.value !== confirmPassword.value){
         Swal.fire({
-  icon: "success",
-  title: "password do not match",
-  showConfirmButton: false,
-  timer: 2000
-});
+        icon: "success",
+        title: "password do not match",
+        showConfirmButton: false,
+        timer: 2000
+    });
+    return
     }
     if(!checkBox.checked){
-        blurt("Please agree to the terms")
- 
+        // blurt("Please agree to the terms")
+        Swal.fire({
+            icon:"success",
+            title: "Please agree to the terms",
+            showConfirmButton: false,
+            timer: 2000
+        })
+        return
     }
     try{
         const userCredential = await createUserWithEmailAndPassword(auth,
              email.value,
-              password.value,
-              confirmPassword.value
+              password.value
             );
-        alert("Account Created successfully!!")
+        // alert("Account Created successfully!!")
+         Swal.fire({
+            icon:"success",
+            title: "Account Created Successfully",
+            showConfirmButton: false,
+            timer: 2000
+        })
         console.log(userCredential.user)
         form.reset()
-        window.location.href = "logIn-form.html"
+        setTimeout(()=>{
+            window.location.href = "index.html";
+        },2000)
+   
         // alert("comgrat")
     }catch(error){
         alert(error.message)
@@ -56,13 +71,13 @@ form.addEventListener("submit", async function(Event){
 
 })
 
-// function colloctedData(){
-//     const data = {
-//         fullnameA: fullname.value,
-//         emailA: email.value,
-//         passwordA: password.value,
-//         confirmPasswordA: confirmPassword.value,
-//         checkboxValue : checkBox.checked
-//     }
-//     console.log(data)
-//     return data
+function colloctedData(){
+    const data = {
+        fullnameA: fullname.value,
+        emailA: email.value,
+        passwordA: password.value,
+        confirmPasswordA: confirmPassword.value,
+        checkboxValue : checkBox.checked
+    }
+    console.log(data)
+}
