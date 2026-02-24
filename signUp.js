@@ -14,6 +14,7 @@
   /* // Initialize Firebase */
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app)
+
 document.addEventListener("DOMContentLoaded", ()=>{
 const fullname = document.getElementById("fullname")
 const email = document.getElementById("email")
@@ -60,12 +61,7 @@ form.addEventListener("submit", async function(Event){
         form.reset()
         // Rediret to login demo
           setTimeout(()=>{
-          const goLogin = document.getElementById("goLogin")
-        goLogin.addEventListener("click", function(e){
-        e.preventDefault();
-          window.location.href = "index.html";
-    })
-
+               window.location.href = "index.html";
         },2000)
         
         // alert("comgrat")
@@ -74,7 +70,12 @@ form.addEventListener("submit", async function(Event){
     }
 
 })
-    
+    const goLogin = document.getElementById("goLogin")
+    goLogin.addEventListener("click", function(e){
+        e.preventDefault();
+          window.location.href = "index.html";
+    })
+
 
 
 })
