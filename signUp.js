@@ -71,13 +71,3 @@ form.addEventListener("submit", async function(Event){
 
 })
 
-function colloctedData(){
-    const data = {
-        fullnameA: fullname.value,
-        emailA: email.value,
-        passwordA: password.value,
-        confirmPasswordA: confirmPassword.value,
-        checkboxValue : checkBox.checked
-    }
-    console.log(data)
-}
