@@ -14,8 +14,7 @@
   /* // Initialize Firebase */
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app)
-
-
+document.addEventListener("DOMContentLoaded", ()=>{
 const fullname = document.getElementById("fullname")
 const email = document.getElementById("email")
 const password = document.getElementById("password")
@@ -26,10 +25,9 @@ form.addEventListener("submit", async function(Event){
     Event.preventDefault();
     // colloctedData()
 
-
-    if (password.value !== confirmPassword.value){
+ if (password.value !== confirmPassword.value){
         Swal.fire({
-        icon: "success",
+        icon: "error",
         title: "password do not match",
         showConfirmButton: false,
         timer: 2000
@@ -39,7 +37,7 @@ form.addEventListener("submit", async function(Event){
     if(!checkBox.checked){
         // blurt("Please agree to the terms")
         Swal.fire({
-            icon:"success",
+            icon:"error",
             title: "Please agree to the terms",
             showConfirmButton: false,
             timer: 2000
@@ -60,14 +58,28 @@ form.addEventListener("submit", async function(Event){
         })
         console.log(userCredential.user)
         form.reset()
-        setTimeout(()=>{
-            window.location.href = "index.html";
+        // Rediret to login demo
+          setTimeout(()=>{
+          const goLogin = document.getElementById("goLogin")
+        goLogin.addEventListener("click", function(e){
+        e.preventDefault();
+          window.location.href = "index.html";
+    })
+
         },2000)
-   
+        
         // alert("comgrat")
     }catch(error){
         alert(error.message)
     }
 
 })
+    
 
+
+})
+
+
+
+
+   

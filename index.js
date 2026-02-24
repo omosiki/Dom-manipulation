@@ -10,11 +10,21 @@ form.addEventListener("submit", function(e){
     console.log("password:", password)
 
     // Simple validation
+    
     if(email && password){
-        alert("Login successfully")
-    }else(
-        alert("Please enter email and password")
-    )
+          Swal.fire({
+            icon:"success",
+            title: "Login Successfully",
+            showConfirmButton: false,
+            timer: 2000
+        })
+    }else{
+        Swal.fire({
+                icon:"error",
+                title: "Please enter email and password"
+            });
+    }
+    form.reset()
 });
 
     // link to signUp demo
