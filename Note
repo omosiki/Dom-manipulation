@@ -1,0 +1,32 @@
+Login and SignUp project with Firebase
+----login-Page
+----signUp-Page
+----dashboard-Page
+
+I copy a pre-built Login and SignUp form from W3 school .
+The Loginpage appear first, then a button at the bellow to signUp if the user have not,
+The signUp form contain
+--Fullname
+--Email address
+--password
+--confirmPassword
+--checked button
+After successfully enterd the requested data it check if the password match the confirmpassword that is inputed.
+Then Firebase create user with EmailAndPassword inputted and save.
+--If password doest not match firebase or sweetAlert will send an erro message
+--But if confirm to matches it sweeAlert send a success message
+    Firebase --- createUserWithEmailAndPassword in signUp form
+Login form
+Login form contain email and password
+Once email and password is inputed and submitted firebase check user has account with them 
+--If yes it, it send a success alert using sweeAlert
+--If no, an error message will be send by firebase or sweetAlert
+    Firebase --- signInWithEmailAndPassword in login form
+Dashboard has nothing much, it was created to direct user to the main page
+
+
+Technology Used:
+---Javascript
+---Firebase
+---sweeAlert
+---
