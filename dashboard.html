@@ -1,45 +1,155 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
-
-.image-container {
-  background-image: url("img_nature.jpg");
-  background-size: cover;
-  position: relative;
-  height: 300px;
-}
-
-.text {
-  background-color: white;
-  color: black;
-  font-size: 10vw; 
-  font-weight: bold;
-  margin: 0 auto;
-  padding: 10px;
-  width: 50%;
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  mix-blend-mode: screen;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard.css">
+    <title>Document</title>
 </head>
 <body>
+    <div class="main-container">
+    <!-- Author: FormBold Team -->
+    <!-- Learn More: https://formbold.com -->
+    <div class="form-wrapper">
+        
 
-<h2>Responsive Cutout Text Effect</h2>
 
-<div class="image-container">
-  <div class="text">NATURE</div>
+        <form id="myform">
+            <!-- Title and Description -->
+            <div class="form-header">
+                <h2 class="form-title">Get in Touch</h2>
+                <p class="form-description">
+                    Please fill out the form to get more information or book a
+                    demo. All required fields are marked with *.
+                </p>
+            </div>
+
+            <!-- Essential Fields -->
+            <div class="form-group">
+                <label for="fullname" class="form-label">Full Name*</label>
+                <input
+                    type="text"
+                    name="fullname"
+                    id="fullname"
+                    class="form-input"
+                    required
+                />
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="form-label">Email Address*</label>
+                <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="form-input"
+                    required
+                />
+            </div>
+
+            <div class="form-group">
+                <label for="phone" class="form-label"
+                    >Phone Number (Optional)</label
+                >
+                <input type="tel" name="phone" id="phone" class="form-input" />
+            </div>
+
+            <div class="form-group">
+                <label for="company" class="form-label"
+                    >Company Name (Optional)</label
+                >
+                <input
+                    type="text"
+                    name="company"
+                    id="company"
+                    class="form-input"
+                />
+            </div>
+
+            <div class="form-group">
+                <label for="job-title" class="form-label"
+                    >Job Title (Optional)</label
+                >
+                <input
+                    type="text"
+                    name="job-title"
+                    id="job-title"
+                    class="form-input"
+                />
+            </div>
+
+            <div class="form-group">
+                <label for="message" class="form-label"
+                    >Message / Inquiry (Optional)</label
+                >
+                <textarea
+                    name="message"
+                    id="message"
+                    rows="4"
+                    class="form-textarea"
+                ></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="interest" class="form-label">Interested In*</label>
+                <select
+                    name="interest"
+                    id="interest"
+                    class="form-select"
+                    required
+                >
+                    <option value="product-demo">Product Demo</option>
+                    <option value="pricing">Pricing</option>
+                    <option value="support">Support</option>
+                </select>
+            </div>
+
+            <!-- Compliance & Consent -->
+            <div class="consent-group">
+                <input
+                    type="checkbox"
+                    id="consent"
+                    class="form-checkbox"
+                    required
+                />
+                <label for="consent" class="consent-label">
+                    I agree to receive communications about products, services,
+                    and updates.
+                </label>
+            </div>
+
+            <!-- Optional Privacy Policy and GDPR Notice -->
+            <div class="privacy-links">
+                <a href="#">Privacy Policy</a> 
+                <a href="#">GDPR Notice</a>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Submit Inquiry</button>
+        </form>
+    </div>
 </div>
 
-<p>This example creates a responsive cutout text/knockout text - text that appears cut out on top of a background image.</p>
-<p>Resize the browser window to see the responsive effect.</p>
-<p><strong>Note:</strong> This example does not work in Internet Explorer or Edge.</p>
+    <table  id="dataTable">
+  <thead>
+    <tr>
+      <th>Full Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Company</th>
+      <th>Job Title</th>
+      <th>Message</th>
+      <th>Interest</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Data will be inserted here -->
+  </tbody>
+</table>
+
+
+</div>
+<script src="getInTouch.js" defer></script>
 
 </body>
 </html>
