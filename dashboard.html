@@ -53,15 +53,23 @@
                 >
                 <input type="tel" name="phone" id="phone" class="form-input" />
             </div>
-
             <div class="form-group">
-                <label for="company" class="form-label"
-                    >Company Name (Optional)</label
-                >
+                    
+                <label for="dob" class="form-label">Date of Birth:</label>
+                <input 
+                    type="date" 
+                    id="dob" 
+                    class="form-input"
+                    name="date_of_birth" 
+                    required min="1900-01-01" max="2026-02-28">
+                
+            </div>
+            <div class="form-group">
+                <label for="company" class="form-label" >Nationality</label >
                 <input
                     type="text"
-                    name="company"
-                    id="company"
+                    name="nationality"
+                    id="nationality"
                     class="form-input"
                 />
             </div>
@@ -77,8 +85,112 @@
                     class="form-input"
                 />
             </div>
+            <div class="form-group">
+                <label for="attachment" class="form-label">Attachment (Optional)</label>
+                <input
+                    type="file"
+                    name="attachment"
+                    id="attachment"
+                    class="form-input"
+                    accept=".jpg,.jpeg,.png,.pdf,.docx"
+                    required
+                />
+            </div>
+            <div class="form-group">
+                <label for="waec_result" class="form-label">Upload your WAEC result</label>
+                <input
+                    type="file" 
+                    name="waec_result" 
+                    id="waec_result" 
+                    class="form-input"
+                    accept=".jpg.jpeg.png.pdf" required
+                />
+                
+            </div>
+                       <div class="form-group">
+                <label for="interest" class="form-label">Certificate Obtained</label>
+                <select
+                    name="interest"
+                    id="interest"
+                    class="form-select"
+                    required
+                >
+                    <!-- <option value="product-demo">Product Demo</option> -->
+                    <option value="wassce">WASSCE</option>
+                    <option value="neco">NECO</option>
+                    <option value="gce">GCE</option>
+                    <option value="awaiting result">AWAITING RESULT</option>
+                </select>
+            </div>
+
 
             <div class="form-group">
+                <label for="interest" class="form-label">Gender</label>
+                <select
+                    name="interest"
+                    id="interest"
+                    class="form-select"
+                    required
+                >
+                    <!-- <option value="product-demo">Product Demo</option> -->
+                    <option value="pricing">Male</option>
+                    <option value="support">Female</option>
+                </select>
+            </div>
+           
+            <div class="form-group">
+            <label for="state" class="form-label">State of origin</label>
+                <select id="state" name="state" class="form-input" required>
+                    <!-- <option value="">--Select State--</option> -->
+                    <option value="Abia">Abia</option>
+                    <option value="Adamawa">Adamawa</option>
+                    <option value="Akwa Ibom">Akwa Ibom</option>
+                    <option value="Anambra">Anambra</option>
+                    <option value="Bauchi">Bauchi</option>
+                    <option value="Bayelsa">Bayelsa</option>
+                    <option value="Benue">Benue</option>
+                    <option value="Borno">Borno</option>
+                    <option value="Cross River">Cross River</option>
+                    <option value="Delta">Delta</option>
+                    <option value="Ebonyi">Ebonyi</option>
+                    <option value="Edo">Edo</option>
+                    <option value="Ekiti">Ekiti</option>
+                    <option value="Enugu">Enugu</option>
+                    <option value="FCT">Federal Capital Territory</option>
+                    <option value="Gombe">Gombe</option>
+                    <option value="Imo">Imo</option>
+                    <option value="Jigawa">Jigawa</option>
+                    <option value="Kaduna">Kaduna</option>
+                    <option value="Kano">Kano</option>
+                    <option value="Katsina">Katsina</option>
+                    <option value="Kebbi">Kebbi</option>
+                    <option value="Kogi">Kogi</option>
+                    <option value="Kwara">Kwara</option>
+                    <option value="Lagos">Lagos</option>
+                    <option value="Nasarawa">Nasarawa</option>
+                    <option value="Niger">Niger</option>
+                    <option value="Ogun">Ogun</option>
+                    <option value="Ondo">Ondo</option>
+                    <option value="Osun">Osun</option>
+                    <option value="Oyo">Oyo</option>
+                    <option value="Plateau">Plateau</option>
+                    <option value="Rivers">Rivers</option>
+                    <option value="Sokoto">Sokoto</option>
+                    <option value="Taraba">Taraba</option>
+                    <option value="Yobe">Yobe</option>
+                    <option value="Zamfara">Zamfara</option>
+                </select>
+
+             </div>
+             <div class="form-group">
+                    <label for="local-govt" class="form-label">Local Government Area:</label>
+                    <input type="text"
+                    id="lga"
+                    name="lga"  
+                    class="form-input"
+                    placeholder="Enter your LGA">
+             </div>
+              <div class="form-group">
                 <label for="message" class="form-label"
                     >Message / Inquiry (Optional)</label
                 >
@@ -89,21 +201,6 @@
                     class="form-textarea"
                 ></textarea>
             </div>
-
-            <div class="form-group">
-                <label for="interest" class="form-label">Interested In*</label>
-                <select
-                    name="interest"
-                    id="interest"
-                    class="form-select"
-                    required
-                >
-                    <option value="product-demo">Product Demo</option>
-                    <option value="pricing">Pricing</option>
-                    <option value="support">Support</option>
-                </select>
-            </div>
-
             <!-- Compliance & Consent -->
             <div class="consent-group">
                 <input
@@ -130,22 +227,7 @@
     </div>
 </div>
 
-    <table  id="dataTable">
-  <thead>
-    <tr>
-      <th>Full Name</th>
-      <th>Email</th>
-      <th>Phone</th>
-      <th>Company</th>
-      <th>Job Title</th>
-      <th>Message</th>
-      <th>Interest</th>
-    </tr>
-  </thead>
-  <tbody>
-    <!-- Data will be inserted here -->
-  </tbody>
-</table>
+  
 
 
 </div>
