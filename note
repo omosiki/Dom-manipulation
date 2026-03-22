@@ -1,0 +1,61 @@
+What is Dom Document object model
+What is node and type of nodes
+slecting Element using DOM
+    *getElementbyId()
+    *getElementbyName()
+    *getElementbyTagName
+    *getElementbyClassName 
+    *querySelector 
+
+-getElementbyClassName method return an array likr a object of the child element with a specificd class Name
+-getElementbyTagName accept a tag anme and reture a live colloction of html
+-querySelector methods allow you to select the first element that matches one or more css selecto
+Traversing Element
+    *slecting parent Element
+    *slecting Child Element
+    *slecting sibling Element
+
+
+manipulating HTML Element
+    *createElement()
+    *appendChild()
+    *createContent()
+    *innerHTML()
+    *affter()
+    *append()
+    *prepend()
+    *insertAdjacentHTML()
+    *replaceChild()
+    *cloneNode()
+    *removeChild()
+    *insertChild()
+
+Attribute method
+    *getAttribute()
+    *removeAttribute()
+    *setAttribute()
+    *hasAtrribute()
+
+Manipulating Element style
+    *style property
+    *css
+    *getComputed style
+    *classList property
+    *className property
+
+ JAVSCRIPT  EVENT
+    *What is event
+    *Event bubbling and event capturing
+    *Event handler in HTML Attribute
+    *addEventListener()
+    *removeEventListener()
+    DoM 0 level event handler
+    *Event object
+    *diffrent type of object
+
+
+DOM is an application programming interface(APi) for manipulation of HTML
+the dom provide function that alkow u to add and remove, amd modify part of the document effectively.
+
+Node relationship
+Any node has relationship to other nodes in the DOM tree, and it si some as describe as tradition family tree.
