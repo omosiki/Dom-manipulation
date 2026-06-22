@@ -43,7 +43,7 @@
     .form-description {
         margin-top: 0.5rem; /* mt-2 */
         font-size: 0.875rem; /* text-sm */
-        color: #4b5563; /* text-gray-600 */
+        color: #4b5563; 
         line-height: 1.5;
     }
 
@@ -59,6 +59,7 @@
         font-size: 0.875rem; /* text-sm */
         font-weight: 500; /* font-medium */
         color: #212121; /* text-gray-600 */
+        display: block;
     }
 
     /* Common styles for input, select, and textarea */
